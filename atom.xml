@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-08-29T08:24:39.305Z</updated>
+  <updated>2024-08-29T08:37:13.338Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Ubuntu配置Hadoop3.x</title>
     <link href="http://example.com/2024/08/29/Ubuntu%E9%85%8D%E7%BD%AEHadoop3.x/"/>
     <id>http://example.com/2024/08/29/Ubuntu%E9%85%8D%E7%BD%AEHadoop3.x/</id>
     <published>2024-08-29T08:23:31.814Z</published>
-    <updated>2024-08-29T08:24:39.305Z</updated>
+    <updated>2024-08-29T08:37:13.338Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td</summary>
+    <summary type="html">&lt;h2 id=&quot;一、前置条件&quot;&gt;&lt;a href=&quot;#一、前置条件&quot; class=&quot;headerlink&quot;</summary>
         
       
     
