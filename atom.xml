@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-08-30T13:22:54.708Z</updated>
+  <updated>2024-09-24T08:35:43.431Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2024/09/24/NLP%E5%9F%BA%E7%A1%80/"/>
+    <id>http://example.com/2024/09/24/NLP%E5%9F%BA%E7%A1%80/</id>
+    <published>2024-09-24T08:35:43.431Z</published>
+    <updated>2024-09-24T08:35:43.431Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;NLP基础&lt;/p&gt;
+&lt;h2 id=&quot;1-NLP-基本概念&quot;&gt;&lt;a href=&quot;#1-NLP-基本概念&quot; class=&quot;headerlink&quot; title=&quot;1) NLP 基本概念&quot;&gt;&lt;/a&gt;1) NLP 基本概念&lt;/h2&gt;&lt;p&gt;① NLP（Natural Language</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>甘肃政法大学数据安全协创社团</title>
