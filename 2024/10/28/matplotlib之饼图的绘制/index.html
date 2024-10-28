@@ -124,7 +124,7 @@
 <p>①不适合展示大量数据：当饼状图中有太多的数据时，图表的可读性会受到影响。这时，为了使数据清晰			可读，需要将图表细分成更多的饼状图或选择其他类型的图表。</p>
 <p>②容易产生误解：由于饼状图只能展示单一维度的数据，因此在比较不同数据集时，观众可能会产生误			解，特别是当数据之间的差异很小时。</p>
 <p>③不适用于复杂的数据：如果数据之间的关系很复杂，使用饼状图可能不够直观，因为它只能展示单一维			度的数据。</p>
-<h4 id="创建饼图"><a href="#创建饼图" class="headerlink" title="创建饼图"></a>创建饼图</h4><ul>
+<h3 id="创建饼图"><a href="#创建饼图" class="headerlink" title="创建饼图"></a>创建饼图</h3><ul>
 <li>在绘制饼图之前，要调用一些函数</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure>
@@ -136,32 +136,32 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">y = np.array([<span class="number">20</span>, <span class="number">20</span>, <span class="number">45</span>, <span class="number">15</span>])  </span><br><span class="line">plt.pie(y)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p><img src="/matplotlib%E4%B9%8B%E9%A5%BC%E5%9B%BE%E7%9A%84%E7%BB%98%E5%88%B6/0747881c4f30ee45d8931e1dea43511c8b.jpg" alt="image-20241028002142113"></p>
+<p><img src="https://picture.gptkong.com/20241028/0747881c4f30ee45d8931e1dea43511c8b.jpg" alt="图1"></p>
 <h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><ul>
 <li>使用label参数为饼图添加标签</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">my_labels = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>]  </span><br><span class="line">y = np.array([<span class="number">20</span>, <span class="number">20</span>, <span class="number">45</span>, <span class="number">15</span>])  </span><br><span class="line">plt.pie(y, labels=my_labels)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p><img src="/matplotlib%E4%B9%8B%E9%A5%BC%E5%9B%BE%E7%9A%84%E7%BB%98%E5%88%B6/07464d4e9c18444067b1e96217d38c7f8b.jpg"></p>
+<p><img src="https://picture.gptkong.com/20241028/07464d4e9c18444067b1e96217d38c7f8b.jpg" alt="图2"></p>
 <h4 id="分离指定的块"><a href="#分离指定的块" class="headerlink" title="分离指定的块"></a>分离指定的块</h4><ul>
 <li>使用关键字explode实现分离一个块</li>
 <li>必须是一个数组，每个块都要有值，值代表距离中心有多远</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">my_labels = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>]  </span><br><span class="line">y = np.array([<span class="number">20</span>, <span class="number">20</span>, <span class="number">45</span>, <span class="number">15</span>])  </span><br><span class="line">my_explode = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>]  </span><br><span class="line">plt.pie(y, labels=my_labels, explode=my_explode)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://picture.gptkong.com/20241028/07468a87f870404297a6a82aa4846a8df3.jpg" alt="image-20241028002246365"></p>
+<p><img src="https://picture.gptkong.com/20241028/07468a87f870404297a6a82aa4846a8df3.jpg" alt="图3"></p>
 <h4 id="图例"><a href="#图例" class="headerlink" title="图例"></a>图例</h4><ul>
 <li>使用legend()函数为每一块添加解释列表</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">my_labels = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;]  </span><br><span class="line">y = np.array([20, 20, 45, 15])  </span><br><span class="line">plt.pie(y, labels=my_labels)  </span><br><span class="line">plt.legend()  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p><img src="/matplotlib%E4%B9%8B%E9%A5%BC%E5%9B%BE%E7%9A%84%E7%BB%98%E5%88%B6/07453146c053c8437ca501501099a46968.jpg" alt="image-20241028002309893"></p>
+<p><img src="https://picture.gptkong.com/20241028/07453146c053c8437ca501501099a46968.jpg" alt="图4"></p>
 <h4 id="带标题的图例"><a href="#带标题的图例" class="headerlink" title="带标题的图例"></a>带标题的图例</h4><ul>
 <li>legend()函数里面可以传入带标题的图例，注意需要声明使用哪款字体</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">matplotlib.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;KaiTi&#x27;</span>]  </span><br><span class="line">  </span><br><span class="line">my_labels = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>]  </span><br><span class="line">y = np.array([<span class="number">20</span>, <span class="number">20</span>, <span class="number">45</span>, <span class="number">15</span>])  </span><br><span class="line">plt.pie(y, labels=my_labels)  </span><br><span class="line">plt.legend(title=<span class="string">&quot;我是图例标题的饼图&quot;</span>)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p><img src="/matplotlib%E4%B9%8B%E9%A5%BC%E5%9B%BE%E7%9A%84%E7%BB%98%E5%88%B6/0745c77fa0ed8a4e93a357ec0e9574e7ec.jpg" alt="image-20241028002435252"></p>
+<p><img src="https://picture.gptkong.com/20241028/0745c77fa0ed8a4e93a357ec0e9574e7ec.jpg" alt="图5"></p>
  
       <!-- reward -->
       

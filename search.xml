@@ -1,65 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>matplotlib之饼图的绘制</title>
-    <url>/2024/10/28/matplotlib%E4%B9%8B%E9%A5%BC%E5%9B%BE%E7%9A%84%E7%BB%98%E5%88%B6/</url>
-    <content><![CDATA[<h1 id="饼图"><a href="#饼图" class="headerlink" title="饼图"></a>饼图</h1><p><strong>饼状图</strong>顾名思义就是形如圆饼状的图形，它是一种常用的图表类型，通常用于展示数据的占比关系。饼状图通过将一个圆形区域划分为多个子区域，反应出不同子类数据之间的的对比关系以及子类数据在大类中的百分比。饼状图将一个数据集按照每个数据项所占比例的大小，将整个数据集表示为一个圆形，再将圆形分割成不同大小的扇形区域，每个扇形区域的大小表示该数据项所占的比例大小。</p>
-<p>通过饼状图，人们可以直观地了解各个数据项所占的比例大小，以便更好地进行比较和分析。饼状图通常用于展示数据的构成比例、市场份额、支出占比等相关信息。</p>
-<h4 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a><strong>适用场景</strong></h4><p>饼状图适用于以下场景：</p>
-<p>①显示各部分在整体中的占比情况，可以帮助人们直观地比较不同部分之间的大小关系。</p>
-<p>②展示分类数据的相对比例，特别是在不同部分之间存在明显的大小差异时，更能凸显数据的特点。</p>
-<p>③适用于展示少量数据，饼状图的数据量不宜过多，否则将会使饼状图过于复杂，难以清晰表达数据。</p>
-<p>④饼状图适用于视觉化数据，能够让非专业人士轻松理解数据，是一种常用的数据可视化方式。</p>
-<h4 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h4><p>饼状图是一种常见的统计图表，以圆形的方式展示数据的相对大小和占比关系。</p>
-<p>（1）它的主要<strong>优点</strong>包括：</p>
-<p>①易于理解：饼状图通常可以直观地展示数据占比，使观众很容易理解数据之间的比例关系。</p>
-<p>②易于制作：相对于其他复杂的图表类型，饼状图很容易制作和编辑，适用于初学者和快速制作。</p>
-<p>③可视化效果好：饼状图通常有一种饼的形状，这种形状可以更加清晰地表达数据的占比关系。</p>
-<p>（2）饼状图的<strong>缺点</strong>是：</p>
-<p>①不适合展示大量数据：当饼状图中有太多的数据时，图表的可读性会受到影响。这时，为了使数据清晰			可读，需要将图表细分成更多的饼状图或选择其他类型的图表。</p>
-<p>②容易产生误解：由于饼状图只能展示单一维度的数据，因此在比较不同数据集时，观众可能会产生误			解，特别是当数据之间的差异很小时。</p>
-<p>③不适用于复杂的数据：如果数据之间的关系很复杂，使用饼状图可能不够直观，因为它只能展示单一维			度的数据。</p>
-<h4 id="创建饼图"><a href="#创建饼图" class="headerlink" title="创建饼图"></a>创建饼图</h4><ul>
-<li>在绘制饼图之前，要调用一些函数</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>使用pie()函数绘制饼图</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">y = np.array([<span class="number">20</span>, <span class="number">20</span>, <span class="number">45</span>, <span class="number">15</span>])  </span><br><span class="line">plt.pie(y)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p><img src="/matplotlib%E4%B9%8B%E9%A5%BC%E5%9B%BE%E7%9A%84%E7%BB%98%E5%88%B6/0747881c4f30ee45d8931e1dea43511c8b.jpg" alt="image-20241028002142113"></p>
-<h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><ul>
-<li>使用label参数为饼图添加标签</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">my_labels = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>]  </span><br><span class="line">y = np.array([<span class="number">20</span>, <span class="number">20</span>, <span class="number">45</span>, <span class="number">15</span>])  </span><br><span class="line">plt.pie(y, labels=my_labels)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p><img src="/matplotlib%E4%B9%8B%E9%A5%BC%E5%9B%BE%E7%9A%84%E7%BB%98%E5%88%B6/07464d4e9c18444067b1e96217d38c7f8b.jpg"></p>
-<h4 id="分离指定的块"><a href="#分离指定的块" class="headerlink" title="分离指定的块"></a>分离指定的块</h4><ul>
-<li>使用关键字explode实现分离一个块</li>
-<li>必须是一个数组，每个块都要有值，值代表距离中心有多远</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">my_labels = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>]  </span><br><span class="line">y = np.array([<span class="number">20</span>, <span class="number">20</span>, <span class="number">45</span>, <span class="number">15</span>])  </span><br><span class="line">my_explode = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>]  </span><br><span class="line">plt.pie(y, labels=my_labels, explode=my_explode)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://picture.gptkong.com/20241028/07468a87f870404297a6a82aa4846a8df3.jpg" alt="image-20241028002246365"></p>
-<h4 id="图例"><a href="#图例" class="headerlink" title="图例"></a>图例</h4><ul>
-<li>使用legend()函数为每一块添加解释列表</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">my_labels = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;]  </span><br><span class="line">y = np.array([20, 20, 45, 15])  </span><br><span class="line">plt.pie(y, labels=my_labels)  </span><br><span class="line">plt.legend()  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p><img src="/matplotlib%E4%B9%8B%E9%A5%BC%E5%9B%BE%E7%9A%84%E7%BB%98%E5%88%B6/07453146c053c8437ca501501099a46968.jpg" alt="image-20241028002309893"></p>
-<h4 id="带标题的图例"><a href="#带标题的图例" class="headerlink" title="带标题的图例"></a>带标题的图例</h4><ul>
-<li>legend()函数里面可以传入带标题的图例，注意需要声明使用哪款字体</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">matplotlib.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;KaiTi&#x27;</span>]  </span><br><span class="line">  </span><br><span class="line">my_labels = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>]  </span><br><span class="line">y = np.array([<span class="number">20</span>, <span class="number">20</span>, <span class="number">45</span>, <span class="number">15</span>])  </span><br><span class="line">plt.pie(y, labels=my_labels)  </span><br><span class="line">plt.legend(title=<span class="string">&quot;我是图例标题的饼图&quot;</span>)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<p><img src="/matplotlib%E4%B9%8B%E9%A5%BC%E5%9B%BE%E7%9A%84%E7%BB%98%E5%88%B6/0745c77fa0ed8a4e93a357ec0e9574e7ec.jpg" alt="image-20241028002435252"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>NLP基础</title>
     <url>/2024/09/24/NLP%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h2 id="1-NLP-基本概念"><a href="#1-NLP-基本概念" class="headerlink" title="1) NLP 基本概念"></a>1) NLP 基本概念</h2><p>① NLP（Natural Language Processing），也就是人们常说的「<a href="https://zhida.zhihu.com/search?q=%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86&zhida_source=entity&is_preview=1">自然语言处理</a>」，就是研究如何让计算机读懂人类语言，即将人的自然语言转换为计算机可以阅读的指令。</p>
@@ -103,15 +44,6 @@
 <p>4.无法融合上下文关系，例如，今天去水果店里买苹果，苹果对应的向量仅仅是取词料库中的向量进行匹配，而并不是在前面的水果向量的基础上产生的向量，因此词向量无法融合上下文关系。</p>
 </blockquote>
 <p>③ 静态词向量方法有：word2vec，不能解决一词多译问题；动态词向量方法有： elmo、opt、bert，能解决一词多译问题。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>甘肃政法大学数据安全协创社团</title>
-    <url>/2024/08/30/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E5%8D%8F%E5%88%9B%E7%A4%BE%E5%9B%A2/</url>
-    <content><![CDATA[<h3 id="数据安全协创社团成员博客"><a href="#数据安全协创社团成员博客" class="headerlink" title="数据安全协创社团成员博客"></a>数据安全协创社团成员博客</h3><img src="https://picture.gptkong.com/20240830/2020c4ae2fe01842b281f462b3407e1a6f.jpg" style="zoom:50%;" />
-
-<p><strong>数据安全协创社团</strong>前身为<strong>电子数据取证社团</strong>，2021年由电子取证社团与网络特攻社团合并成立。社团旨在通过开展学习、讨论、实践、研究等各种活动，让同学们对<strong>网络攻防技术、网络犯罪侦察与取证和人工智能</strong>有更全面、更透彻的认识，扩展理论知识，获得理论联系实际的实践机会，提高专业技能水平以及培养学生的职业素质。</p>
-<p>数据安全协创社团的成员都对电子取证以及CTF比赛有着浓厚的兴趣，在多次大型赛事中获得优异成绩。社团对于<strong>网络安全知识学习尤为重视</strong>，经常组织<strong>各类社团内部赛，社团学习</strong>等。通过此类活动达到以赛促学，更好的帮助成员学习知识。<strong>同时拥有多个练习平台，所有平台均实现自主化设计，编写</strong>。</p>
 ]]></content>
   </entry>
   <entry>
@@ -302,6 +234,74 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>matplotlib之饼图的绘制</title>
+    <url>/2024/10/28/matplotlib%E4%B9%8B%E9%A5%BC%E5%9B%BE%E7%9A%84%E7%BB%98%E5%88%B6/</url>
+    <content><![CDATA[<h1 id="饼图"><a href="#饼图" class="headerlink" title="饼图"></a>饼图</h1><p><strong>饼状图</strong>顾名思义就是形如圆饼状的图形，它是一种常用的图表类型，通常用于展示数据的占比关系。饼状图通过将一个圆形区域划分为多个子区域，反应出不同子类数据之间的的对比关系以及子类数据在大类中的百分比。饼状图将一个数据集按照每个数据项所占比例的大小，将整个数据集表示为一个圆形，再将圆形分割成不同大小的扇形区域，每个扇形区域的大小表示该数据项所占的比例大小。</p>
+<p>通过饼状图，人们可以直观地了解各个数据项所占的比例大小，以便更好地进行比较和分析。饼状图通常用于展示数据的构成比例、市场份额、支出占比等相关信息。</p>
+<h4 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a><strong>适用场景</strong></h4><p>饼状图适用于以下场景：</p>
+<p>①显示各部分在整体中的占比情况，可以帮助人们直观地比较不同部分之间的大小关系。</p>
+<p>②展示分类数据的相对比例，特别是在不同部分之间存在明显的大小差异时，更能凸显数据的特点。</p>
+<p>③适用于展示少量数据，饼状图的数据量不宜过多，否则将会使饼状图过于复杂，难以清晰表达数据。</p>
+<p>④饼状图适用于视觉化数据，能够让非专业人士轻松理解数据，是一种常用的数据可视化方式。</p>
+<h4 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h4><p>饼状图是一种常见的统计图表，以圆形的方式展示数据的相对大小和占比关系。</p>
+<p>（1）它的主要<strong>优点</strong>包括：</p>
+<p>①易于理解：饼状图通常可以直观地展示数据占比，使观众很容易理解数据之间的比例关系。</p>
+<p>②易于制作：相对于其他复杂的图表类型，饼状图很容易制作和编辑，适用于初学者和快速制作。</p>
+<p>③可视化效果好：饼状图通常有一种饼的形状，这种形状可以更加清晰地表达数据的占比关系。</p>
+<p>（2）饼状图的<strong>缺点</strong>是：</p>
+<p>①不适合展示大量数据：当饼状图中有太多的数据时，图表的可读性会受到影响。这时，为了使数据清晰			可读，需要将图表细分成更多的饼状图或选择其他类型的图表。</p>
+<p>②容易产生误解：由于饼状图只能展示单一维度的数据，因此在比较不同数据集时，观众可能会产生误			解，特别是当数据之间的差异很小时。</p>
+<p>③不适用于复杂的数据：如果数据之间的关系很复杂，使用饼状图可能不够直观，因为它只能展示单一维			度的数据。</p>
+<h3 id="创建饼图"><a href="#创建饼图" class="headerlink" title="创建饼图"></a>创建饼图</h3><ul>
+<li>在绘制饼图之前，要调用一些函数</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>使用pie()函数绘制饼图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">y = np.array([<span class="number">20</span>, <span class="number">20</span>, <span class="number">45</span>, <span class="number">15</span>])  </span><br><span class="line">plt.pie(y)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://picture.gptkong.com/20241028/0747881c4f30ee45d8931e1dea43511c8b.jpg" alt="图1"></p>
+<h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><ul>
+<li>使用label参数为饼图添加标签</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">my_labels = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>]  </span><br><span class="line">y = np.array([<span class="number">20</span>, <span class="number">20</span>, <span class="number">45</span>, <span class="number">15</span>])  </span><br><span class="line">plt.pie(y, labels=my_labels)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://picture.gptkong.com/20241028/07464d4e9c18444067b1e96217d38c7f8b.jpg" alt="图2"></p>
+<h4 id="分离指定的块"><a href="#分离指定的块" class="headerlink" title="分离指定的块"></a>分离指定的块</h4><ul>
+<li>使用关键字explode实现分离一个块</li>
+<li>必须是一个数组，每个块都要有值，值代表距离中心有多远</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">my_labels = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>]  </span><br><span class="line">y = np.array([<span class="number">20</span>, <span class="number">20</span>, <span class="number">45</span>, <span class="number">15</span>])  </span><br><span class="line">my_explode = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>]  </span><br><span class="line">plt.pie(y, labels=my_labels, explode=my_explode)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://picture.gptkong.com/20241028/07468a87f870404297a6a82aa4846a8df3.jpg" alt="图3"></p>
+<h4 id="图例"><a href="#图例" class="headerlink" title="图例"></a>图例</h4><ul>
+<li>使用legend()函数为每一块添加解释列表</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">my_labels = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;]  </span><br><span class="line">y = np.array([20, 20, 45, 15])  </span><br><span class="line">plt.pie(y, labels=my_labels)  </span><br><span class="line">plt.legend()  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://picture.gptkong.com/20241028/07453146c053c8437ca501501099a46968.jpg" alt="图4"></p>
+<h4 id="带标题的图例"><a href="#带标题的图例" class="headerlink" title="带标题的图例"></a>带标题的图例</h4><ul>
+<li>legend()函数里面可以传入带标题的图例，注意需要声明使用哪款字体</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">matplotlib.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;KaiTi&#x27;</span>]  </span><br><span class="line">  </span><br><span class="line">my_labels = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>]  </span><br><span class="line">y = np.array([<span class="number">20</span>, <span class="number">20</span>, <span class="number">45</span>, <span class="number">15</span>])  </span><br><span class="line">plt.pie(y, labels=my_labels)  </span><br><span class="line">plt.legend(title=<span class="string">&quot;我是图例标题的饼图&quot;</span>)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://picture.gptkong.com/20241028/0745c77fa0ed8a4e93a357ec0e9574e7ec.jpg" alt="图5"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>甘肃政法大学数据安全协创社团</title>
+    <url>/2024/08/30/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E5%8D%8F%E5%88%9B%E7%A4%BE%E5%9B%A2/</url>
+    <content><![CDATA[<h3 id="数据安全协创社团成员博客"><a href="#数据安全协创社团成员博客" class="headerlink" title="数据安全协创社团成员博客"></a>数据安全协创社团成员博客</h3><img src="https://picture.gptkong.com/20240830/2020c4ae2fe01842b281f462b3407e1a6f.jpg" style="zoom:50%;" />
+
+<p><strong>数据安全协创社团</strong>前身为<strong>电子数据取证社团</strong>，2021年由电子取证社团与网络特攻社团合并成立。社团旨在通过开展学习、讨论、实践、研究等各种活动，让同学们对<strong>网络攻防技术、网络犯罪侦察与取证和人工智能</strong>有更全面、更透彻的认识，扩展理论知识，获得理论联系实际的实践机会，提高专业技能水平以及培养学生的职业素质。</p>
+<p>数据安全协创社团的成员都对电子取证以及CTF比赛有着浓厚的兴趣，在多次大型赛事中获得优异成绩。社团对于<strong>网络安全知识学习尤为重视</strong>，经常组织<strong>各类社团内部赛，社团学习</strong>等。通过此类活动达到以赛促学，更好的帮助成员学习知识。<strong>同时拥有多个练习平台，所有平台均实现自主化设计，编写</strong>。</p>
 ]]></content>
   </entry>
 </search>
