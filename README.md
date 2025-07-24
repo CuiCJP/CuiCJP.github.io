@@ -1,2 +1,2 @@
-# rRain丶的博客
+# XingCR的博客
 # CuiCJP.github.io
