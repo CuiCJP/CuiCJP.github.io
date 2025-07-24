@@ -1,2 +1,2 @@
 # XingCR的博客
-# CuiCJP.github.io
+# XingCR.github.io
