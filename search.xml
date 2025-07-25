@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>随笔</title>
+    <url>/2025/07/25/%E9%9A%8F%E7%AC%94/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>有一天，我忽然意识到，焦虑并不是源自外界的刺激，而是源自我对自己的苛责。正是我内心深处那种“我必须要达到某种标准”、“我必须要追上某些人”的执念，才让我陷入了无休止的竞争与自我消耗之中。其实，外界并没有强迫我去那么快地生活，是我给自己施加了无法承受地压力。</p>
+<p>我慢慢懂得，生活不是一场竞速赛，也不是一场资源的比拼。每个人都有自己独特的轨迹和节奏，追求速度和外在的成就，只会让我失去真正生活的意义。那些我曾经认为必须要拥有的东西，未必真的的属于我，未必真正的能带来内心的满足和安宁。</p>
+<p>曾经，我认为停下来是一种失败，但现在我明白，停下来反而是一种智慧。停下来去感受内心的声音，去思考自己真正想要的是什么，去看清那些被社会定义的成功是否真的适合我。我不再焦虑于别人走得有多快，而是专注于自己脚下的每一步，享受当下，享受自己的节奏。</p>
+<p>或许，我会慢慢的发现，真正的幸福，并不是在于追上别人，而是在于追上那个更好的自己。在这个过程中，焦虑会渐渐褪去，取而代之的是一份宁静与自信。我终于明白，生活不是一场必须赢得的竞赛，而是一段让我发现自我、接纳自我的旅程。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2025/07/24/hello-world/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -16,15 +25,6 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>随笔</title>
-    <url>/2025/07/25/%E9%9A%8F%E7%AC%94/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>有一天，我忽然意识到，焦虑并不是源自外界的刺激，而是源自我对自己的苛责。正是我内心深处那种“我必须要达到某种标准”、“我必须要追上某些人”的执念，才让我陷入了无休止的竞争与自我消耗之中。其实，外界并没有强迫我去那么快地生活，是我给自己施加了无法承受地压力。</p>
-<p>我慢慢懂得，生活不是一场竞速赛，也不是一场资源的比拼。每个人都有自己独特的轨迹和节奏，追求速度和外在的成就，只会让我失去真正生活的意义。那些我曾经认为必须要拥有的东西，未必真的的属于我，未必真正的能带来内心的满足和安宁。</p>
-<p>曾经，我认为停下来是一种失败，但现在我明白，停下来反而是一种智慧。停下来去感受内心的声音，去思考自己真正想要的是什么，去看清那些被社会定义的成功是否真的适合我。我不再焦虑于别人走得有多快，而是专注于自己脚下的每一步，享受当下，享受自己的节奏。</p>
-<p>或许，我会慢慢的发现，真正的幸福，并不是在于追上别人，而是在于追上那个更好的自己。在这个过程中，焦虑会渐渐褪去，取而代之的是一份宁静与自信。我终于明白，生活不是一场必须赢得的竞赛，而是一段让我发现自我、接纳自我的旅程。</p>
 ]]></content>
   </entry>
 </search>
